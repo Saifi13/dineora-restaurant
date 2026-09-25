@@ -13,16 +13,18 @@ function Navbar() {
 
         <button
           className="menu-toggle"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle navigation"
+          type="button"
+          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
           aria-expanded={menuOpen}
+          aria-controls="mobile-navigation"
+          onClick={() => setMenuOpen((open) => !open)}
         >
           <span />
           <span />
           <span />
         </button>
 
-        <nav className={`nav-links ${menuOpen ? "active" : ""}`}>
+        <nav className={`nav-links ${menuOpen ? "open" : ""}`} id="mobile-navigation">
           <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
           <a href="#menu" onClick={() => setMenuOpen(false)}>Our Menu</a>
           <a href="#story" onClick={() => setMenuOpen(false)}>Our Story</a>
