@@ -6,7 +6,7 @@ const photos = [
 
 export default function Feast() {
   return (
-    <main className="feast-page">
+    <section className="feast-page">
       <header className="feast-header">
         <svg
           className="feast-logo"
@@ -37,6 +37,6 @@ export default function Feast() {
       </section>
 
       
-    </main>
+    </section>
   );
 }

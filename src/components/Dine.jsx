@@ -42,7 +42,7 @@ function FeatureCard({ image, stickers, icon }) {
 
 function Dine() {
   return (
-    <section className="dine-section" id="dine">
+    <section className="dine-section" id="story">
       <div className="dine-container">
         <h1>Why Dine with Us?</h1>
 

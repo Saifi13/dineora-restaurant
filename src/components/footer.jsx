@@ -4,19 +4,18 @@ const footerColumns = [
   {
     title: "Navigate",
     links: [
-      ["Home", "#home"],
-      ["Home V2", "#home"],
-      ["Menu", "#menu"],
-      ["About", "#about"],
-      ["Contact", "#contact"],
+      ["Home", "/"],
+      ["Menu", "/menu"],
+      ["About", "/story"],
+      ["Contact", "/#contact"],
     ],
   },
   {
     title: "Menu",
     links: [
-      ["Burger", "#menu"],
-      ["Pizza", "#menu"],
-      ["Subway", "#menu"],
+      ["Burger", "/menu"],
+      ["Pizza", "/menu"],
+      ["Subway", "/menu"],
     ],
   },
   {
@@ -135,7 +134,7 @@ export default function Footer() {
             delivered to your door or ready for pick-up.
           </p>
 
-          <a className="footer-order-button" href="#menu">
+          <a className="footer-order-button" href="/menu">
             Order Now <span aria-hidden="true">→</span>
           </a>
         </div>

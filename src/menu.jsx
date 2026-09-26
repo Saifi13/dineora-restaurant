@@ -1,5 +1,6 @@
 import "./index.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const categoryThemes = {
   burger: {
@@ -129,7 +130,7 @@ function ProductCard({ product }) {
       </div>
 
       <div className="product-footer">
-        <button className="add-cart-button">
+        <button className="add-cart-button" type="button">
           Add to cart <span aria-hidden="true">♟</span>
         </button>
       </div>
@@ -143,10 +144,10 @@ function Menu() {
   const visibleProducts =
     selectedCategory === "all"
       ? [
-        products.find((product) => product.category === "burger"),
-        products.find((product) => product.category === "pizza"),
-        products.find((product) => product.category === "subway"),
-      ].filter(Boolean)
+          products.find((product) => product.category === "burger"),
+          products.find((product) => product.category === "pizza"),
+          products.find((product) => product.category === "subway"),
+        ].filter(Boolean)
       : products.filter((product) => product.category === selectedCategory);
 
   const categories = [
@@ -159,7 +160,7 @@ function Menu() {
   return (
     <section className="menu-section" id="menu">
       <div className="menu-content">
-        <img className="menu-image" src="/Menu.png" alt="Menu" />
+        <img className="menu-image" src="/Menu.png" alt="" />
 
         <h2>Our Signature Dishes</h2>
 
@@ -173,6 +174,7 @@ function Menu() {
           {categories.map(([value, label, icon]) => (
             <button
               key={value}
+              type="button"
               className={selectedCategory === value ? "active" : ""}
               onClick={() => setSelectedCategory(value)}
             >
@@ -187,12 +189,13 @@ function Menu() {
           ))}
         </div>
 
-        <button className="view-all-button">
+        <Link className="view-all-button" to="/menu">
           View All <span aria-hidden="true">→</span>
-        </button>
+        </Link>
       </div>
     </section>
   );
 }
 
+export { products, categoryThemes, ProductCard };
 export default Menu;

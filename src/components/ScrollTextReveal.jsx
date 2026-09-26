@@ -12,6 +12,8 @@ const revealSelector = [
   ".fresh-content",
   ".reviews-header",
   ".review-card",
+  ".story-copy",
+  ".story-photos",
   ".feast-header",
   ".footer-hero-content",
   ".footer-column",
