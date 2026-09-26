@@ -3337,3 +3337,8 @@ body {
 
 
 
+@media (max-width: 700px) {
+  .quality-cards-orbit {
+    translate: none !important;
+  }
+}
