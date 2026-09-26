@@ -120,7 +120,8 @@ function StoryPage() {
             </div>
           </div>
         </div>
-      </section>,
+      </section>
+      
 <Reviews/>
       <Footer />
     </main>
