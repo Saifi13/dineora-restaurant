@@ -3335,10 +3335,3 @@ body {
   transform: scaleX(1);
 }
 
-/* Add at the end of the file. */
-@media (min-width: 701px) {
-  .quality-cards-orbit {
-    left: calc(50% - 250px);
-    translate: none;
-  }
-}
