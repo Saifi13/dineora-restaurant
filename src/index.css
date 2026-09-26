@@ -3335,3 +3335,10 @@ body {
   transform: scaleX(1);
 }
 
+
+@media (min-width: 701px) {
+  .quality-cards-orbit {
+    left: calc(50% - 250px);
+    translate: none;
+  }
+}
