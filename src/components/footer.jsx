@@ -1,21 +1,22 @@
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 const footerColumns = [
   {
     title: "Navigate",
     links: [
       ["Home", "/"],
+      ["About Us", "/story"],
+      ["Contact", "/contact"],
       ["Menu", "/menu"],
-      ["About", "/story"],
-      ["Contact", "/#contact"],
     ],
   },
   {
     title: "Menu",
     links: [
-      ["Burger", "/menu"],
-      ["Pizza", "/menu"],
-      ["Subway", "/menu"],
+      ["Burger", "/menu#burger"],
+      ["Pizza", "/menu#pizza"],
+      ["Subway", "/menu#subway"],
     ],
   },
   {
@@ -192,7 +193,11 @@ export default function Footer() {
             <ul>
               {column.links.map(([label, href]) => (
                 <li key={label}>
-                  <a href={href}>{label}</a>
+                  {href.startsWith("/") ? (
+                    <Link to={href}>{label}</Link>
+                  ) : (
+                    <a href={href}>{label}</a>
+                  )}
                 </li>
               ))}
             </ul>
