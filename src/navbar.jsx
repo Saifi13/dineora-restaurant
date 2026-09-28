@@ -40,8 +40,8 @@ function Navbar() {
             Our Story
           </NavLink>
           <Link to="/contact">Contact</Link>
-          <a href="/#reservations" className="reservation-btn" onClick={() => setMenuOpen(false)}>
-            Reserve a Table <span aria-hidden="true">→</span>
+          <a className="reservation-btn" href="/contact">
+            Reserve Table
           </a>
         </nav>
       </div>
