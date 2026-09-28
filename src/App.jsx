@@ -10,6 +10,7 @@ import Footer from "./components/footer";
 import MenuPage from "./menuPage";
 import StoryPage from "./storyPage";
 import ScrollTextReveal from "./components/ScrollTextReveal";
+import ContactPage from "./components/contact";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -44,6 +45,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/menu" element={<MenuPage />} />
         <Route path="/story" element={<StoryPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </BrowserRouter>
   );

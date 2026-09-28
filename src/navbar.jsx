@@ -39,9 +39,7 @@ function Navbar() {
           <NavLink to="/story" onClick={() => setMenuOpen(false)}>
             Our Story
           </NavLink>
-          <a href="/#contact" onClick={() => setMenuOpen(false)}>
-            Contact
-          </a>
+          <Link to="/contact">Contact</Link>
           <a href="/#reservations" className="reservation-btn" onClick={() => setMenuOpen(false)}>
             Reserve a Table <span aria-hidden="true">→</span>
           </a>
